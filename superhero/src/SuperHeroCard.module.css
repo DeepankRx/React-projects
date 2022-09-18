@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #588aed;
+  color: rgb(53, 50, 50);
+  font-size: calc(10px + 2vmin);
+}
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.imageContainer img {
+  margin: 2rem auto;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: rgb(14, 109, 197);
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: rgb(133, 14, 197);
+}
+
+span {
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  color: rgb(0, 255, 187);
+  text-emphasis: calc(10px + 2vmin);
+}
+.biography {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 70%;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.appearance {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 70%;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.powerstats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 70%;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 70%;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.connections {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 70%;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 1rem;
+}

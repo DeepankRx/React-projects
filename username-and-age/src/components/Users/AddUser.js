@@ -1,23 +1,25 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import Card from '../UI/Card.js';
 import classes from './AddUser.module.css';
 import Button from '../UI/Button.js';
 import ErrorModal from '../UI/ErrorModal.js';
 const AddUser = props => {
-
-    const [enteredUsername,setEnteredUsername] = useState('');
-    const [enteredAge,setEnteredAge] = useState('');
+    const nameInputRef = useRef();
+    const ageInputRef = useRef();
+  
     const [error,setError] = useState();
     const AddUserHandler = (event) => {
         event.preventDefault();
-        if(enteredUsername.trim().length===0 || enteredAge.trim().length===0){
+        const enteredName = nameInputRef.current.value;
+        const enteredUserAge = ageInputRef.current.value;
+        if(enteredName.trim().length===0 || enteredUserAge.trim().length===0){
             setError({
                 title:"Input Invalid",
                 message:"Please enter a valid username and age (non empty values)"
             })
             return;
         }
-        if(+enteredAge<1)
+        if(+enteredUserAge<1)
         {
             setError({
                 title:"Input Invalid",
@@ -25,18 +27,11 @@ const AddUser = props => {
             })
             return;
         }
-        props.onAddUser(enteredUsername,enteredAge);
-        setEnteredUsername('');
-        setEnteredAge('');
+        props.onAddUser(enteredName,enteredUserAge);
+        nameInputRef.current.value = "";
+        ageInputRef.current.value = "";
     }
-    const usernameChangeHandler = (event) =>
-    {
-        setEnteredUsername(event.target.value);
-    }
-    const ageChangeHandler = (event) =>
-    {
-        setEnteredAge(event.target.value);
-    }
+   
     const errorHandler = () =>
     {
         setError(null);
@@ -47,9 +42,14 @@ const AddUser = props => {
         <Card className={classes.input}>
         <form onSubmit={AddUserHandler}>
             <label htmlFor="username">Username</label>
-            <input id="username" type="text" onChange={usernameChangeHandler} value={enteredUsername}/>
+            <input id="username" 
+            type="text" 
+                ref={nameInputRef}
+            />
             <label htmlFor="age">Age</label>
-            <input id="age" type="number" onChange={ageChangeHandler} value={enteredAge}/>
+            <input id="age" type="number" 
+                ref={ageInputRef}
+            />
             <Button type="submit">AddUser</Button>
         </form>
         </Card>

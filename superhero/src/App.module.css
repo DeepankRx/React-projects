@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  background-color: #282c34;
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 3rem;
+  background-color: #000;
+  color: #fff;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+}
+.logo img {
+  width: 5rem;
+  max-height: 3rem;
+  margin-right: 0.5rem;
+}
+
+.logo i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  align-self: center;
+}
+.logo i:hover {
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+.links ul {
+  display: flex;
+  flex-direction: row;
+}
+.links ul li {
+  list-style: none;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-self: center;
+}
+
+.links ul li i {
+  font-size: 2.2rem;
+  margin-right: 0.5rem;
+  align-self: center;
+}
+.links ul li i:hover {
+  cursor: pointer;
+  color: #ff0000;
+  font-size: 3rem;
+  transition: all 1s ease-in-out;
+}
+body {
+  background: rgb(58, 75, 180);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  height: 80vh;
+
+  color: #fff;
+}
+.inputContainer input {
+  width: 50%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  outline: none;
+}
+.inputContainer input:focus {
+  border: 1px solid #ff0000;
+}
+
+.inputContainer input::placeholder {
+  color: #aaa;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.inputContainer button {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  outline: none;
+  background-color: #ff0000;
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+}
