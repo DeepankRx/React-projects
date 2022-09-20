@@ -29,7 +29,7 @@ const App = () => {
     }
 
     setSuperHero(response.data);
-    superHeroName('');
+    setSuperHeroName('');
   };
   return (
     <div className={styles.container}>
